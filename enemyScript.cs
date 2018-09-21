@@ -11,6 +11,7 @@ public class enemyScript : MonoBehaviour {
 	private float moveCounter;
 	private float intervalCounter;
 	private bool moving = true;
+	private float direction = -1f;
 	
 
 	// Use this for initialization
