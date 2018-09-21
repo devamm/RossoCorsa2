@@ -20,7 +20,9 @@ public class KimiAnimator : MonoBehaviour {
 			anim.SetBool("MoveDown", false);
 			anim.SetBool("MoveLeft", false);
 			anim.SetBool("MoveRight", false);
-
+		}
+		else if(Input.GetKeyUp(KeyCode.W)){
+			anim.SetBool("MoveUp", false);
 		}
 		
 		else if(Input.GetKey(KeyCode.S)){
@@ -28,8 +30,10 @@ public class KimiAnimator : MonoBehaviour {
 			anim.SetBool("MoveUp", false);
 			anim.SetBool("MoveDown", true);
 			anim.SetBool("MoveLeft", false);
-			anim.SetBool("MoveRight", false);
-			
+			anim.SetBool("MoveRight", false);	
+		}
+		else if(Input.GetKeyUp(KeyCode.S)){
+			anim.SetBool("MoveDown", false);
 		}
 
 		else if(Input.GetKey(KeyCode.D)){
@@ -39,6 +43,9 @@ public class KimiAnimator : MonoBehaviour {
 			anim.SetBool("MoveLeft", false);
 			anim.SetBool("MoveRight", true);
 		}
+		else if(Input.GetKeyUp(KeyCode.D)){
+			anim.SetBool("MoveRight", false);
+		}
 
 		else if(Input.GetKey(KeyCode.A)){
 			kimi.Translate(-Vector3.right * speed);
@@ -46,6 +53,9 @@ public class KimiAnimator : MonoBehaviour {
 			anim.SetBool("MoveDown", false);
 			anim.SetBool("MoveLeft", true);
 			anim.SetBool("MoveRight", false);
+		}
+		else if(Input.GetKeyUp(KeyCode.A)){
+			anim.SetBool("MoveLeft", false);
 		}
 	}
 
