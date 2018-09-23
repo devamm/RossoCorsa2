@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KimiAnimator : MonoBehaviour {
 	Transform kimi;
@@ -62,6 +63,7 @@ public class KimiAnimator : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D obj){
 		if(obj.gameObject.tag != "wall"){
 			Debug.Log("Collision!", null);
+			SceneManager.LoadScene("MainGame");
 		}
 	}
 }

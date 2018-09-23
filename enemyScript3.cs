@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyScript2 : MonoBehaviour {
+public class enemyScript3 : MonoBehaviour {
 	public Transform rep2;
 	public float moveSpeed;
 	public float moveTime;
@@ -15,7 +15,7 @@ public class enemyScript2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		rep2 = GameObject.Find("reporter2").GetComponent<Transform>();	
+		rep2 = GameObject.Find("reporter3").GetComponent<Transform>();	
 		intervalCounter = interval;
 		moveCounter = moveTime;
 
