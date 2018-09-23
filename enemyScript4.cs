@@ -49,7 +49,7 @@ public class enemyScript4 : MonoBehaviour {
 		}
 	}
 	void OnCollisionEnter2D(Collision2D obj){
-		if(obj.gameObject.tag == "wall"){
+		if(obj.gameObject.tag == "wall" || obj.gameObject.tag == "enemy"){
 			direction *= -1;
 		}
 	}
