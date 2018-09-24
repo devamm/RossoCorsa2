@@ -5,17 +5,19 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 
 	private Animator anim;
-	//private Renderer render;
+	private Renderer card;
 	private bool win;
 	private bool gameOver;
 	private bool playing = true;
-	private float countdown = 3f;
+	private float countdown;
 
 
 	// Use this for initialization
 	void Start () {
 		anim = GameObject.Find("kimi0").GetComponent<Animator>();
-		//render = GameObject.Find("enemies").GetComponent<Renderer>();
+		card = GameObject.Find("winCard").GetComponent<Renderer>();
+		card.enabled = false;
+		countdown = 1.5f;
 	}
 	
 	// Update is called once per frame
@@ -32,8 +34,8 @@ public class GameController : MonoBehaviour {
 
 			if(win){
 				playing = false;
-				//Destroy(GameObject.Find("enemies"), 0f);
 				Debug.Log("you win!", null);
+				card.enabled = true;
 			}
 
 			if(gameOver){
