@@ -65,9 +65,10 @@ public class KimiAnimator : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D obj){
 		if(obj.gameObject.tag == "Finish"){
 			anim.SetBool("Win", true);
+			return;
 		}
 		
-		if(obj.gameObject.tag != "wall"){
+		if(obj.gameObject.tag == "enemy"){
 			//Debug.Log("Collision!", null);
 			anim.SetBool("GameOver", true);
 			//SceneManager.LoadScene("MainGame");
