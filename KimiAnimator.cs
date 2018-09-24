@@ -61,9 +61,13 @@ public class KimiAnimator : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D obj){
+		if(obj.gameObject.tag == "Finish"){
+			anim.SetBool("Win", true);
+		}
+		
 		if(obj.gameObject.tag != "wall"){
 			Debug.Log("Collision!", null);
-			SceneManager.LoadScene("MainGame");
+			
 		}
 	}
 }
