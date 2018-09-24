@@ -17,13 +17,12 @@ public class GameController : MonoBehaviour {
 		anim = GameObject.Find("kimi0").GetComponent<Animator>();
 		card = GameObject.Find("winCard").GetComponent<Renderer>();
 		card.enabled = false;
-		countdown = 1.5f;
+		countdown = 2f;
 	}
 	
 	// Update is called once per frame
 	void Update () {		
 		if(!playing){
-			Debug.Log("starting end timer", null);
 			countdown -= Time.deltaTime;
 			if(countdown < 0){
 				SceneManager.LoadScene("Menu");
@@ -34,7 +33,6 @@ public class GameController : MonoBehaviour {
 
 			if(win){
 				playing = false;
-				Debug.Log("you win!", null);
 				card.enabled = true;
 			}
 
