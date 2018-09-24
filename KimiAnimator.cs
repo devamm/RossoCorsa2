@@ -11,6 +11,8 @@ public class KimiAnimator : MonoBehaviour {
 	void Start () {
 		kimi = GameObject.Find("kimi0").GetComponent<Transform> ();
 		anim = GameObject.Find("kimi0").GetComponent<Animator>();
+		anim.SetBool("Win", false);
+		anim.SetBool("GameOver", false);
 
 	}
 
@@ -66,8 +68,9 @@ public class KimiAnimator : MonoBehaviour {
 		}
 		
 		if(obj.gameObject.tag != "wall"){
-			Debug.Log("Collision!", null);
-			
+			//Debug.Log("Collision!", null);
+			anim.SetBool("GameOver", true);
+			//SceneManager.LoadScene("MainGame");
 		}
 	}
 }
